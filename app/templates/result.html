@@ -1,0 +1,11 @@
+{% extends "base.html" %}   
+
+{% block content %}
+
+    <main>
+        <h1>Twój wynik: {{ score }}/{{ total }}</h1>
+        <p>Twój najwyższy wynik: {{ highscore }}</p>
+        <a href="{{ url_for('quiz') }}">Spróbuj ponownie</a>
+    </main>
+
+{% endblock %}

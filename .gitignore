@@ -1,0 +1,6 @@
+# Pliki Python
+*.pyc
+__pycache__/
+
+# Pliki baz danych
+*.db
