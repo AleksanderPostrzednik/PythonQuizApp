@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+    <h2>Pytanie {{ question_number }} z {{ total }}</h2>
+    <p>{{ question.question }}</p>
+    <form method="POST">
+        {% for option in question.options %}
+            <input type="radio" id="option{{ loop.index }}" name="answer" value="{{ option }}" required>
+            <label for="option{{ loop.index }}">{{ option }}</label><br>
+        {% endfor %}
+        <br>
+        <button type="submit">{% if question_number == total %}Zakończ{% else %}Dalej{% endif %}</button>
+    </form>
+</main>
+
+{% endblock %}
